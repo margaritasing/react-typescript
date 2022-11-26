@@ -12,7 +12,7 @@ export const Timer = ( { milisegundos }: TimerArgs) => {
 
     useEffect(() => {
        ref.current && clearInterval( ref.current ) 
-       ref.current = setInterval(()=> setSegundos( s => s + 1), milisegundos);     
+       ref.current = setInterval(()=> setSegundos( s => s + 1), 1000);     
     }, [milisegundos])
     
     
