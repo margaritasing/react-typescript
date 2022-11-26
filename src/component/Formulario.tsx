@@ -10,13 +10,13 @@ interface FormData {
 
 export const Formulario = () => {
 
-    const {formulario, handleChange } = useForm<FormData>({
-        email:'',
-        nombre:'',
+    const {nombre, edad, email, handleChange, formulario} = useForm<FormData>({
+        email:'lfreites@inti.gob.ar',
+        nombre:'Libia Freites',
         edad: 44
     });
 
-    const {email, nombre, edad  } = formulario
+    /* const {email, nombre, edad  } = formulario */
 
     /* const [formulario, setFormulario] = useState({
         email:'',
@@ -40,6 +40,7 @@ export const Formulario = () => {
             <input type="email" 
                 className="form-control"
                 name="email" 
+                value={ email }
                 onChange={handleChange}/>
         </div>
         <div className="mb-3">
@@ -47,6 +48,7 @@ export const Formulario = () => {
             <input type="text" 
                 className="form-control"
                 name="nombre" 
+                value={ nombre }
                 onChange={handleChange}/>
         </div>
         <div className="mb-3">
@@ -54,10 +56,11 @@ export const Formulario = () => {
             <input type="number" 
                 className="form-control"
                 name="edad" 
+                value={ edad }
                 onChange={handleChange}/>
         </div>
 
-        <pre>{JSON.stringify(formulario)}</pre>
+        <pre>{JSON.stringify(formulario)}</pre>        
     </form>
   )
 }

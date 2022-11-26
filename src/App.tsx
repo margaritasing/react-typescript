@@ -1,6 +1,7 @@
 import { ContadorReducer } from "./component/ContadorReducer";
 import Counter from "./component/Counter";
 import { Formulario } from "./component/Formulario";
+import { Formulario2 } from "./component/Formulario2";
 import { TimerPadre } from "./component/TimerPadre";
 import Usuario from "./component/Usuario";
 
@@ -29,6 +30,7 @@ function App() {
 
     <h2>CustomHook</h2>
     <Formulario/>
+    <Formulario2/>
     
      
     </>

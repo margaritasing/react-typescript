@@ -1,9 +1,9 @@
 import { ChangeEvent, useState } from "react";
 
 
-export function useForm<T>(initState:T) {
+/* export function useForm<T>(initState:T) { */
 
-   /*  export const useForm = (initState: any) => { */
+export const useForm = <T extends Object>(initState: T) => {
 
     const [formulario, setFormulario] = useState(initState);
 
@@ -18,6 +18,7 @@ export function useForm<T>(initState:T) {
 
     return {
         formulario,
-        handleChange
+        handleChange,
+        ...formulario
     }
 }
